@@ -1,5 +1,9 @@
 composer.lock
 
+public/mix-manifest.json
+public/css/app.css
+public/js/app.js
+
 /node_modules
 /public/hot
 /public/storage
@@ -19,4 +23,3 @@ yarn-error.log
 .buildpath
 .project
 .settings
-
