@@ -32,7 +32,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function register()
     {
         // merge all configuration files
-        $configDir = __DIR__ . '/../config';
+        $configDir = __DIR__ . '/../../config';
         $configFiles = scandir($configDir);
         foreach ($configFiles as $file) {
             if (in_array($file, ['.', '..'])) {
