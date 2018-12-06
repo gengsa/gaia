@@ -11,6 +11,7 @@
         "laravel/tinker": "^1.0"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.2",
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
@@ -25,7 +26,11 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "providers": [
+                "Gaia\\ServiceProvider"
+            ],
+            "aliases": {
+            }
         }
     },
     "autoload": {
@@ -45,15 +50,5 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ]
     }
 }
