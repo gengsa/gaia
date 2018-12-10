@@ -79,9 +79,7 @@ class GaiaServiceProvider extends ServiceProvider
     {
         // merge all configuration files
         // TODO: maybe need array merge recursively
-        
         $files = [];
-        // TODO: checck config dir path
         $configPath = __DIR__ . '/../config';
         /**
          * @var $file \SplFileInfo
