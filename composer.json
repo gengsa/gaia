@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Gaia\\ServiceProvider"
+                "Gaia\\Providers\\AppServiceProvider"
             ],
             "aliases": {
             }
