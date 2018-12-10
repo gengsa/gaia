@@ -165,15 +165,11 @@ return [
         /*
          * Package Service Providers...
          */
-
         /*
          * Application Service Providers...
          */
-        Gaia\Providers\AppServiceProvider::class,
-        Gaia\Providers\AuthServiceProvider::class,
-        // Gaia\Providers\BroadcastServiceProvider::class,
-        Gaia\Providers\EventServiceProvider::class,
-        Gaia\Providers\RouteServiceProvider::class,
+        // package service providers and application service providers moved into GaiaServiceProvider
+        Gaia\GaiaServiceProvider::class,
 
     ],
 

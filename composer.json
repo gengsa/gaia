@@ -27,7 +27,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Gaia\\Providers\\AppServiceProvider"
+                "Gaia\\GaiaServiceProvider"
             ],
             "aliases": {
             }
@@ -35,7 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gaia\\": "src/Gaia"
+            "Gaia\\": "app/"
         },
         "classmap": [
             "database/seeds",

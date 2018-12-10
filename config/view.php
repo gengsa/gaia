@@ -13,9 +13,10 @@ return [
     |
     */
 
-    'paths' => [
+    'paths' => array_unique([
         resource_path('views'),
-    ],
+        GAIA_PATH . '/resources/views',
+    ]),
 
     /*
     |--------------------------------------------------------------------------
