@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Shanghai', // timezone is very important, it affect password hash
 
     /*
     |--------------------------------------------------------------------------

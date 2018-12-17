@@ -13,9 +13,11 @@ return [
     |
     | Supported: "bcrypt", "argon", "argon2id"
     |
+    | Extra option supported by Gaia: "md5" for password hash
+    |
     */
 
-    'driver' => 'bcrypt',
+    'driver' => 'md5',
 
     /*
     |--------------------------------------------------------------------------

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Gaia\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use Gaia\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -26,6 +26,18 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
+
+    /**
+     * Get the login username to be used by the controller.
+     * This filed from form is used to attampt login.
+     * We want to login by email or login_Name.
+     *
+     * @return string
+     */
+    public function username()
+    {
+        return 'username';
+    }
 
     /**
      * Create a new controller instance.

@@ -66,10 +66,13 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
-            'model' => Gaia\User::class,
+            'driver' => 'custom',
+            'model' => Gaia\Libs\User\Models\Member::class,
         ],
-
+//         'users' => [
+//             'driver' => 'eloquent',
+//             'model' => Gaia\Libs\User\Models\Member::class,
+//         ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
