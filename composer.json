@@ -1,7 +1,7 @@
 {
-    "name": "gengsa/gaiaphp",
+    "name": "gengsa/gaia",
     "type": "project",
-    "description": "gaia php",
+    "description": "gaia",
     "keywords": [
     ],
     "require": {
@@ -38,8 +38,6 @@
             "Gaia\\": "app/"
         },
         "classmap": [
-            "database/seeds",
-            "database/factories"
         ]
     },
     "autoload-dev": {
@@ -50,5 +48,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+        "post-create-project-cmd": "@php artisan key:generate --ansi"
     }
 }

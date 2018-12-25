@@ -22,8 +22,7 @@ class Controller extends BaseController
                 'goods5',
                 'goods6',
                 'goods7',
-            ]
-
+            ],
         ];
         return view('index', ['cart' => $cart]);
     }

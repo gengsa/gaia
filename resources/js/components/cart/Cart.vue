@@ -1,6 +1,6 @@
 <template>
   <div>
-    this is old cart
+    this is gaia cart component
     <cart-item v-for="item in cart.items" :key="item" :item="item"/>
   </div>
 </template>

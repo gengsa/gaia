@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span> {{ item }} </span>
+    <span> gaia cart item: {{ item }} </span>
   </div>
 </template>
 
