@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'custom',
-            'model' => Gaia\Libs\User\Models\Member::class,
+            'model' => Gaia\Models\Member::class,
         ],
 //         'users' => [
 //             'driver' => 'eloquent',

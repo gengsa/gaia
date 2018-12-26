@@ -4,6 +4,8 @@ namespace Gaia\Http\Controllers\Auth;
 
 use Gaia\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Gaia\Services\User\UserServiceInterface;
+use Gaia\Http\Requests\LoginRequest;
 
 class LoginController extends Controller
 {
@@ -47,5 +49,16 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+    
+    public function login(LoginRequest $request, UserServiceInterface $userService)
+    {
+        $username = $request->get('username');
+        $password = $request->get('password');
+        if ($userService->login($username, $password)) {
+            return $this->sendLoginResponse($request);
+        } else {
+            return $this->sendFailedLoginResponse($request);
+        }
     }
 }

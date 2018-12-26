@@ -2,6 +2,9 @@
 
 namespace Gaia;
 
+use Gaia\Services\User\UserServiceInterface;
+use Gaia\Services\User\UserService;
+
 trait ServiceBindings
 {
     /**
@@ -34,11 +37,8 @@ trait ServiceBindings
 
 //         // Repository services...
 //         Contracts\JobRepository::class => Repositories\RedisJobRepository::class,
-//         Contracts\MasterSupervisorRepository::class => Repositories\RedisMasterSupervisorRepository::class,
-//         Contracts\MetricsRepository::class => Repositories\RedisMetricsRepository::class,
-//         Contracts\ProcessRepository::class => Repositories\RedisProcessRepository::class,
-//         Contracts\SupervisorRepository::class => Repositories\RedisSupervisorRepository::class,
-//         Contracts\TagRepository::class => Repositories\RedisTagRepository::class,
-//         Contracts\WorkloadRepository::class => Repositories\RedisWorkloadRepository::class,
+
+           // services
+           UserServiceInterface::class => UserService::class,
     ];
 }
