@@ -24,5 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        // custom path.lang, use our own data from db
+        $this->app->instance('path.lang', $this->app->storagePath() . '/app/lang');
     }
 }

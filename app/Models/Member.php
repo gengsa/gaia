@@ -1,5 +1,4 @@
 <?php
-
 namespace Gaia\Models;
 
 use Illuminate\Auth\Authenticatable;
