@@ -2,12 +2,13 @@
 
 namespace Gaia\Http\Controllers\Auth;
 
-use Gaia\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Gaia\Services\User\UserServiceInterface;
 use Gaia\Http\Requests\LoginRequest;
+use Gaia\Http\Controllers\ControllerBase;
+use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class LoginController extends ControllerBase
 {
     /*
     |--------------------------------------------------------------------------
@@ -27,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/'; // TODO
 
     /**
      * Get the login username to be used by the controller.
@@ -48,6 +49,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        parent::__construct();
         $this->middleware('guest')->except('logout');
     }
     
@@ -60,5 +62,27 @@ class LoginController extends Controller
         } else {
             return $this->sendFailedLoginResponse($request);
         }
+    }
+
+    /**
+     * Send the response after the user was authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    protected function sendLoginResponse(Request $request)
+    {
+        $request->session()->regenerate();
+
+        $this->clearLoginAttempts($request);
+
+        return $this->authenticated($request, $this->guard()->user())
+        ?: response()->json([
+            'status' => 0,
+            'msg' => '',
+            'data' => [
+                'redirect' => $this->redirectTo, // TODO:
+            ],
+        ]);
     }
 }

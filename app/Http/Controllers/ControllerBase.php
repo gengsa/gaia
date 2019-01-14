@@ -6,24 +6,23 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\View;
 
-class Controller extends BaseController
+class ControllerBase extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function index()
+    public function __construct()
     {
-        $cart = [
-            'items'=> [
-                'goods1',
-                'goods2',
-                'goods3',
-                'goods4',
-                'goods5',
-                'goods6',
-                'goods7',
-            ],
-        ];
-        return view('index', ['cart' => $cart]);
+        $urlPrefix = '';
+        $headerLinks = ['header' => []];
+        $cartNum = 22;
+        $returlUrl = '/'; // TODO
+
+        View::share([
+            'headerLinks' => $headerLinks,
+            'cartNum' => $cartNum,
+            'returnUrl' => $returlUrl,
+        ]);
     }
 }

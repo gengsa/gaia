@@ -12,6 +12,7 @@ class LoginRequest extends Request
     public function rules()
     {
         return [
+            'captcha' => 'required|captcha',
             'username' => 'required',
             'password' => 'required',
         ];

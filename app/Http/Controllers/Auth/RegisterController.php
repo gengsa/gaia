@@ -2,13 +2,13 @@
 
 namespace Gaia\Http\Controllers\Auth;
 
-use Gaia\Http\Controllers\Controller;
-use Gaia\Libs\User\Models\Member;
+use Gaia\Http\Controllers\ControllerBase;
+use Gaia\Models\Member;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
-class RegisterController extends Controller
+class RegisterController extends ControllerBase
 {
     /*
     |--------------------------------------------------------------------------
@@ -37,6 +37,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
+        parent::__construct();
         $this->middleware('guest');
     }
 
@@ -59,7 +60,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \Gaia\Libs\User\Models\Member
+     * @return \Gaia\Models\Member
      */
     protected function create(array $data)
     {
