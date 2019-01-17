@@ -1,0 +1,242 @@
+@import 'checkout';
+
+.cate_name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #360066;
+  margin-bottom: 16px;
+}
+
+.cart_cate {
+  display: block;
+  margin-bottom: 17px;
+}
+
+.pd_import {
+  height: 64px;
+  line-height: 64px;
+  font-size: 13px;
+  vertical-align: middle;
+  padding: 0 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  margin-bottom: 29px;
+}
+
+.pd_import .file_import,
+.pd_import .file_down {
+  float: right;
+}
+
+.pd_import .file_down {
+  margin-right: 32px;
+  color: #360066;
+}
+
+.pd_cart_list {
+  vertical-align: middle;
+  margin:30px 0 3em;
+}
+
+.pd_cart_list .cart_opera {
+  font-size: 13px;
+  float: right;
+  margin-top: 6px;
+}
+
+.cart_opera span {
+  color: #ccc;
+  margin: 0 16px;
+}
+
+.cart_table thead tr {
+  background-color: rgba(0, 0, 0, 0.04);
+  font-size: 13px;
+}
+
+
+.cart_table {
+  td .icon-trash {
+    color: $color-text-gray;
+    font-size: $font-size-ms;
+  }
+
+  thead tr td:nth-child(3),
+  tbody tr td:nth-child(5) {
+    padding-left: 0;
+  }
+  
+  thead tr td:nth-child(4),
+  tbody tr td:nth-child(6) {
+    padding-left: 64px;
+  }
+}
+
+
+.cart_table td.price {
+  font-weight: bold;
+}
+
+
+
+.cart_table td.subtotal_price {
+  color: #ff5445;
+  font-weight: bold;
+}
+
+.cart_table td.tab_img_box {
+  width: 80px;
+}
+
+.cart_table .tab_img {
+  height: 80px;
+  width: 80px;
+  float: left;
+}
+
+.item_detail {
+  float: left;
+  padding: 4px 0;
+  max-width: 450px;
+}
+
+.item_detail .item_name {
+  margin-bottom: 8px;
+  line-height: 1;
+  max-width: 450px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item_detail .item_spec {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.cell_2 span {
+  padding-left: 80px;
+}
+
+.cart_table .insuff_tips {
+  margin-top: 8px;
+}
+
+.insuff_bg {
+  background: rgba(238, 0, 17, 0.03);
+}
+
+.pd_cart_list table tbody td:first-child {
+  border-left: 1px solid #eaeaea;
+  width: 32px;
+}
+
+.pd_cart_list table tbody td:last-child {
+  border-right: 1px solid #eaeaea;
+}
+
+table tr.disabled {
+  background: rgba(0, 0, 0, 0.02);
+  color: #ccc !important;
+}
+
+table tr.disabled .item_spec,
+table tr.disabled .subtotal_price {
+  color: #ccc;
+}
+
+table tr.disabled .quantity_wrap .button {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.cart_amount {
+  position: relative;
+
+  .pay_accept {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    p {
+      margin-bottom: 8px;
+    }
+  }
+
+  .payment_transport {
+    vertical-align: middle;
+
+    span {
+      width: 56px;
+      height: 30px;
+      display: inline-block;
+      margin: 0 2px;
+      mix-blend-mode: multiply;
+      background: url(../static/images/hg_bg.png) 0 0 no-repeat;
+      background-position: 0 -70px;
+    }
+
+    span.pm_paypal {
+      background-position: 0 -220px;
+    }
+  }
+}
+
+.discount_cons li .discount_name {
+  float: none;
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  line-height: 18px;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.selected_opera {
+  color: #333;
+  font-size: 13px;
+  float: left;
+
+  .el-checkbox {
+    margin-right: 6px;
+  }
+
+  .vertical_line {
+    color: #ccc;
+    margin: 0 15px;
+  }
+
+  a.clear_not_avail {
+    color: $color-text-regular;
+  }
+
+  .go_back {
+    color: $color-purple;
+    display: block;
+    margin-top: 8px;
+    width: 150px;
+    line-height: 32px;
+
+    &:hover {
+      color: $color-theme-highlight;
+    }
+  }
+}
+
+.cart_amount {
+  .selected_opera {
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
+.cart_result {
+  p {
+    margin-bottom: 32px;
+  }
+
+  img {
+    margin: 0 auto 32px;
+  }
+}
+

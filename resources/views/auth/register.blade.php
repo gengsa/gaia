@@ -4,9 +4,11 @@
 
 @section('js')
     @parent
+    @inject('regionService', 'Gaia\Services\Region\RegionServiceInterface')
     <script>
         var pageData = {
-            returnUrl: '/home', // TODO
+            returnUrl: '/', // TODO
+            countryList: @json($regionService->getCountryList()),
         };
     </script>
 @endsection

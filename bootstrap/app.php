@@ -28,6 +28,7 @@ $app = new Illuminate\Foundation\Application(
 |
 */
 
+// TODO: move these line to provider
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
     Gaia\Http\Kernel::class

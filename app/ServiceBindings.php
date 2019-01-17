@@ -4,6 +4,8 @@ namespace Gaia;
 
 use Gaia\Services\User\UserServiceInterface;
 use Gaia\Services\User\UserService;
+use Gaia\Services\Region\RegionServiceInterface;
+use Gaia\Services\Region\RegionService;
 
 trait ServiceBindings
 {
@@ -40,5 +42,6 @@ trait ServiceBindings
 
            // services
            UserServiceInterface::class => UserService::class,
+           RegionServiceInterface::class => RegionService::class,
     ];
 }

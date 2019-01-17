@@ -3,6 +3,8 @@
 namespace Gaia\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Gaia\Models\Country;
+use Gaia\Models\CustomCountry;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +28,7 @@ class AppServiceProvider extends ServiceProvider
         //
         // custom path.lang, use our own data from db
         $this->app->instance('path.lang', $this->app->storagePath() . '/app/lang');
+        
+        $this->app->bind(Country::class, CustomCountry::class);
     }
 }

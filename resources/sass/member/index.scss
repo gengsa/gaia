@@ -1,0 +1,538 @@
+.account_box {
+  .account_aside {
+    width: 220px;
+    background: $color-white;
+    padding: 16px 20px;
+    min-height: 538px;
+    float: left;
+
+    h2 {
+      font-size: $font-size-ls;
+      text-align: left;
+      margin-bottom: 16px;
+      color: $color-theme;
+      font-weight: 500;
+    }
+
+    li {
+      line-height: 44px;
+      font-size: $font-size-s;
+
+      &.active {
+        a {
+          color: $color-purple;
+          font-weight: bold;
+        }
+
+        &:before {
+          content:'';
+          display: inline-block;
+          width: 2px;
+          height: 12px;
+          margin-right: 10px;
+          background: $color-purple;
+        }
+      }
+    }
+  }
+
+  .account_content {
+    float: right;
+    margin-left: 16px;
+    width: calc(100% - 236px);
+
+    h2 {
+      font-size: $font-size-m;
+      text-align: left;
+      padding: 16px 20px;
+      margin-bottom: 0;
+      background: $color-white;
+      color: $color-theme;
+      font-weight: 500;
+    }
+  }
+}
+
+.account_info {
+  float: right;
+  width: 100%;
+
+  section {
+    margin-bottom: 1em;
+    padding: 2em;
+    background: $color-white;
+  }
+
+  .account_user {
+    .userPic {
+      display: inline-block;
+      width: 96px;
+      height: 96px;
+      margin-right: 20px;
+      border-radius: 50%;
+      float: left;
+      background: url(../static/images/fs-bg.svg) 0 -104px;
+    }
+    
+    .spec_info {
+      padding: 18px 0;
+    }
+
+    .user_name {
+      font-size: $font-size-lm;
+    }
+  }
+}
+.account_order {
+  width: 100%;
+  padding: 0!important;
+  background: $color-white;
+
+  .title {
+    font-size: 20px;
+    padding: 14px 20px;
+  }
+  ul {
+    padding: 14px 0 32px;
+  }
+
+  li {
+    width: 25%;
+    float: left;
+    margin: 0 auto;
+    text-align: center;
+
+    [class^=icon_] {
+      width: 42px;
+      height: 42px;
+      background: $color-white;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 42px;
+      
+
+      i {
+        font-size: 36px;
+        vertical-align: middle;
+      }
+    }
+
+    .icon_orders {
+      background: #F6F6F6;
+      
+      i {
+        font-size: 24px;
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    p {
+      font-size: $font-size-xs;
+    }
+  }
+}
+.account_orderlist {
+  width: 100%;
+  padding: 0!important;
+  background: $color-white;
+  min-height: 479px;
+
+  .img_items {
+    max-height: 80px;
+    width: auto;
+    
+    img {
+      display: block;
+      height: 80px;
+      width: 80px;
+      margin-right: 13px;
+      float: left;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+    
+  button {
+    margin-top: 10px;
+    display: block;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  table {
+    margin-bottom: 16px;
+  }
+
+  td a {
+    display: block;
+    margin-bottom: 8px;
+    color: $color-blue-secondary;
+    font-size: 13px;
+
+    &:last-child {
+      margin-bottom:0;
+    }
+  }
+
+  .total_items {
+    border-top: 1px solid  rgba(242, 242, 242, 100);
+    text-align: center;
+    font-size: $font-size-xs;
+    color: $color-text-gray;
+    padding: 2px 0 0;
+    margin: 0 0 -16px -20px;
+  }
+}
+
+.recommend_list {
+  padding: 0!important;
+
+  h2 {
+    padding: 12px 20px;
+    text-align: left;
+    font-size: $font-size-ms;
+    color: $color-text-primary;
+    margin-bottom: 0;
+  }
+}
+
+.product-list-carousel {
+  li {
+    width: 25%;
+    float: left;
+
+    .product_card {
+      width: 194px;
+      margin: 0 auto;
+      height: auto;
+    }
+
+    img {
+      height: 160px;
+    }
+  }
+}
+
+// orders
+
+.account_orders {
+  .c-tab {
+    padding-left: 20px;
+    position: relative;
+  }
+}
+
+// order_detail
+
+.account_order_detail {
+  section {
+    margin-bottom: 0.5em;
+    background: $color-white;
+  }
+
+  .title {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+
+  h2 > span {
+    font-size: $font-size-s;
+    color: $color-text-regular;
+    font-weight: 500;
+    display: inline-block;
+    float: right;
+    margin-top: 4px;
+  }
+}
+
+.account_order {
+  .cate_title {
+    font-size: 24px;
+    color: $color-theme-highlight;
+    text-align: center;
+  }
+  button:not(.el-dialog__headerbtn) {
+    display: block;
+    margin: 8px auto;
+    min-width: 108px;
+    min-height: 36px;
+  }
+
+  .cancel_order {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .c-processes {
+    padding-left: 20px;
+  }
+}
+
+.payment_shipping {
+  .col_left {
+    float: left;
+    width: calc(100% - 360px);
+
+    .service_info {
+      display: inline-block;
+    }
+
+    .payment_information {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .shipping_information {
+      padding-left: 0;
+    }
+
+    .info_cons {
+      padding: 12px 20px 20px;
+      font-size: 13px;
+      color:#666;
+    }
+  }
+
+  .col_right {
+    width: 360px;
+    float: right;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    min-height: 351px;
+
+    .amount_cons {
+      width: 360px;
+      padding: 12px 20px 20px;
+
+      .total_amount {
+        font-size: 18px;
+      }
+
+      ul {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.order_items_tab {
+  thead tr td{
+    font-size: 13px;
+    color: #666;
+    padding: 10px 0 10px 16px;
+    line-height: 18px;
+    height: auto;
+  }
+
+  .item_detail .item_name,
+  .item_spec {
+    max-width: 188px!important;
+  }
+}
+
+// package detail alert
+
+.package_cons {
+  margin-bottom: 24px;
+
+  li {
+    margin-right: 30px;
+    float: left;
+    font-size: $font-size-sm;
+    color: $color-text-primary;
+    min-width: 14%;
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      min-width: 27%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    span {
+      color: $color-blue-secondary;
+    }
+  }
+}
+
+.account_personal,
+.account_security,
+.account_address_book,
+.account_subs {
+  background: $color-white;
+  min-height: 538px;
+
+  .verify_box {
+    width: 524px;
+    margin: 0 auto;
+    padding:20px 0 80px;
+
+    li {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.account_personal {
+  .verify_box {
+    button {
+      font-size: $font-size-ms;
+      font-weight: bold;
+    }
+  }
+}
+
+.address_book {
+  padding: 20px 0 74px 20px;
+  
+  button.btn_add_address {
+    min-width: 185px;
+    min-height: 48px;
+  }
+
+  .address {
+    margin-top: 32px;
+  }
+
+  .def_address_info {
+    margin-left: 0;
+
+  }
+
+  .tab-style-3 td {
+    padding: 20px 0;
+  }
+
+  .no_result {
+    text-align: left;
+  }
+}
+
+.email_manager {
+  width: 460px;
+  margin: 0 auto;
+  padding: 32px 0 0;
+  p {
+    font-size: $font-size-ms;
+  }
+
+  ul {
+    margin-top: 20px;
+    li {
+      border: 1px solid $color-border-base;
+      margin-top: -1px;
+      line-height: 44px;
+      padding: 4px 16px;
+      font-size: $font-size-s;
+
+      .switch {
+        float: right;
+      }
+    }
+  }
+}
+
+.invoice_opera {
+  display: inline-block;
+  position: relative;
+
+  ul {
+    position: absolute;
+    top: 20px;
+    right: -60px;
+    z-index: 10;
+    padding: 4px 8px;
+    min-width: 114px;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,0.20);
+
+    a {
+      color: $color-text-primary;
+      line-height: 24px;
+
+      &:hover {
+        color: $color-blue-secondary;
+      }
+    }
+  }
+
+  &:hover {
+    ul {
+      display: block;
+    }
+  }
+}
+
+.search_box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+  border: 1px solid $color-border-base;
+  height: 32px;
+  width: 260px;
+  padding: 0 30px 0 8px;
+
+  input {
+    width: 100%;
+    height: 100%;
+  }
+
+  i {
+    position: absolute;
+    top: 7px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    color: $color-text-gray;
+    border-radius: 3px;
+
+  }
+}
+
+.change_payment {
+  display: inline-block;
+  color: #3f88dd;
+  font-size: 13px;
+  float: right;
+  
+  &:hover {
+    color: #3f88dd;
+    text-decoration: underline;
+  }
+}
+
+.cate_detail {
+  font-size: $font-size-s;
+  color: $color-text-regular;
+  text-align: center;
+  padding: 24px 0 20px;
+}
+
+.variation_order {
+  background-color: $color-white;
+  
+  .c-btn {
+    height: 24px;
+    font-size:12px;
+  }
+}
+.package_detail, .modification_detail {
+  .item_detail .item_name {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+.modification_detail {
+  .btn_opera .btn-confirm {
+    min-width: 280px!important;
+  }
+}

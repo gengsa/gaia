@@ -1,0 +1,22 @@
+.error-404 {
+  text-align: center;
+  padding: 152px 0 283px;
+
+  img {
+    display: block;
+    width: 228px;
+    height: 200px;
+    margin: 0 auto 28px;
+  }
+
+  p.title {
+    font-size: $font-size-m;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  p.des {
+    font-size: $font-size-sm;
+    margin-bottom: 24px;
+  }
+}

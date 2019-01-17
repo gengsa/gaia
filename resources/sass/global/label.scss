@@ -1,0 +1,42 @@
+.pre_order_label,
+.sale_label,
+.user_label,
+.not_avail_label,
+.clearance_label,
+.exclusive_label {
+  background: #12C677;
+  border-radius: 2px;
+  font-size: $font-size-xs;
+  color: $color-white;
+  letter-spacing: 0;
+  padding: 0 4px;
+  min-height: 18px;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.sale_label {
+  background: rgba(146, 34, 216, 0.12);
+  border-radius: 2px;
+  color: #9222D8;
+}
+
+.user_label {
+  background: rgba(128, 0, 255, 0.12);
+  border-radius: 2px;
+  color: $color-theme-highlight;
+  padding: 3px 7px;
+}
+
+.not_avail_label {
+  background: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.clearance_label {
+  background: $color-red-secondary;
+}
+
+.exclusive_label {
+  background: rgba(128,0,255,0.90);;
+}

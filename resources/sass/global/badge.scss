@@ -1,0 +1,29 @@
+// badge标记
+
+.c-badge {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+
+  .c-badge__content{
+    background-color: #ff5445;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 4px;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 500;
+    min-width: 20px;
+
+    &.is-fixed {
+      position: absolute;
+      top: 5px;
+      right: 13px;
+      transform: translateY(-50%) translateX(100%);
+    }
+  }
+}

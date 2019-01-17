@@ -7,6 +7,7 @@ use Gaia\Models\Member;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Gaia\Http\Requests\RegisterRequest;
 
 class RegisterController extends ControllerBase
 {
@@ -28,7 +29,7 @@ class RegisterController extends ControllerBase
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -49,6 +50,7 @@ class RegisterController extends ControllerBase
      */
     protected function validator(array $data)
     {
+        throw \Exception('use request to validate');
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -57,13 +59,39 @@ class RegisterController extends ControllerBase
     }
 
     /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(RegisterRequest $request)
+    {
+        $data = $request->all();
+        var_dump($data);die;
+        // TODO: write new register service in userService
+//         event(new Registered($user = $this->create($request->all())));
+        
+        $this->guard()->login($user);
+        
+        return $this->registered($request, $user)
+        ?: redirect($this->redirectPath());
+    }
+
+    /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
      * @return \Gaia\Models\Member
      */
-    protected function create(array $data)
+    protected function create($login_name, $password, $data)
     {
+        $loginName = $data['name'];
+        $email = $data['name'];
+        $options = [
+//             string            $login_name
+//             \Carbon\Carbon    $reg_time
+        ];
+        var_dump($data);die;
         return Member::create([
             'name' => $data['name'],
             'email' => $data['email'],

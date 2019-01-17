@@ -1,0 +1,423 @@
+.c_cart_cons {
+  dd {
+    padding: 0;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.col_right {
+  dd {
+    padding: 24px 32px 32px;
+  }
+
+  dt {
+    padding: 20px 32px;
+  }
+
+  input {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 12px 16px 11px;
+    width: 80%;
+  }
+
+  button.btn-apply {
+    padding: 13px 18px;
+    margin-left: -10px;
+
+    &.disabled {
+      background: #ccc;
+    }
+  }
+}
+
+.checkout_wrapper {
+  position: relative;
+
+  .default_address {
+    padding: 0 4px 4px;
+  }
+  
+  .col_left {
+    float: left;
+    width: 756px;
+  }
+
+  .col_right {
+    float: right;
+    width: 424px;
+    height: auto;
+  }
+
+  .amount_cons {
+    float: initial;
+    width: auto;
+    padding-top: 0;
+
+    .total_amount {
+      font-size: 18px;
+    }
+
+    li {
+      line-height: 34px;
+    }
+  }
+
+}
+
+.add_new_address {
+  padding: 0 16px 16px;
+
+  .dl_title {
+    font-size: $font-size-m;
+    color: $color-text-primary;
+    margin-bottom: 24px;
+  }
+  
+  .verify_box {
+    margin: 0;
+    padding: 0;
+    width: 520px;
+
+    li {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.form-col-left,
+.form-col-right {
+  float: left;
+  width: calc((100% - 16px) / 2);
+  position: relative;
+}
+
+.form-col-right {
+  float: right;
+}
+
+.tips_item {
+  font-size: 12px;
+  color: #666;
+}
+
+.default_set_address {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 16px;
+
+  input[type=checkbox] {
+    margin-right: 8px;
+  }
+}
+
+.save_address {
+  width: 100%;
+  height: 48px;
+}
+
+.checkout_cart .tab_img {
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+
+.checkout_cart {
+  
+  td {
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  thead td:nth-child(4),
+  tbody td:nth-child(5)
+   {
+    padding-left: 32px;
+  }
+
+  .item_detail {
+    .item_name {
+      max-width: 300px;
+    }
+
+    .item_spec {
+      max-width: 300px;
+    }
+  }
+
+  .price {
+    font-size: 13px;
+  }
+}
+
+.ship_tips {
+  padding: 4px 16px 11px;
+  font-size: $font-size-sm; 
+}
+
+.choose-method {
+  padding-left: 6px;
+  
+  li > div.item {
+    position: relative;
+    padding-left: 44px;
+
+    .el-radio {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      left: 2px;
+      line-height: 40px;
+    }
+  }
+}
+
+// chooose shipping method
+.service_info {
+  cursor: pointer;
+  
+  &::before{
+    content: '';
+    background: url(../static/images/fs-bg.svg) 0 -72px;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-top: -1px;
+  }
+}
+
+.service_info{
+  display: none;
+  margin-left: 20px;
+  color: #00aadd;
+}
+
+.pay_des {
+  font-size: 13px;
+  color: #666;
+  line-height: 22px;
+  margin-left: 44px;
+  margin-bottom: 16px;
+  display: none;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
+
+.choose-method {
+  li {
+    line-height: 40px;
+    vertical-align: middle;
+    font-size: $font-size-sm;
+    color: $color-text-primary;
+    font-weight: 500;
+    cursor: pointer;
+
+    &.active {
+      .item {
+        color: $color-purple-second;
+        font-weight: bold;
+        font-size: $font-size-s;
+      }
+      
+      .service_info {
+        display: inline-block;
+        font-weight: 500;
+      }
+
+      .pay_des {
+        display: block;
+        // max-height: 1000px;
+        transition: max-height 0.5s ease;
+      }
+    }
+
+    &:hover .service_info {
+      display: inline-block;
+    }
+
+    .tax_id_info {
+      position: relative;
+      margin: 4px 44px 16px;
+
+      .v_info {
+        width: 73%;
+      }
+      button {
+        height: 48px;
+        margin-left: -1px;
+        position: absolute;
+      }
+    }
+
+    input[type=radio] {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ccc;
+      vertical-align: middle;
+      margin-right: 20px;
+    }
+  }
+}
+
+// payment
+
+.less_order_detail {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  text-align: right;
+  border: 1px solid #e6e6e6;
+  color: $color-purple;
+  font-size: $font-size-sm;
+  padding-right: 16px;
+  border-top: 1px solid #f5f5f5;
+  margin-top: -1px;
+  
+  & ~ dl {
+    margin-top: -1px;
+  }
+  p {
+    display: inline;
+    cursor: pointer;
+  }
+
+  i {
+    margin-left: 10px;
+  }
+}
+
+.pay_remind {
+  font-size: $font-size-lm;
+  color: $color-text-primary;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding-top: 48px;
+
+  span {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 16px;
+    vertical-align: middle;
+  }
+}
+// 支付结果
+.payment_result {
+  max-width: 360px;
+  margin: 124px auto 342px;
+
+  .icon-ok, .icon-failed {
+    display: block;
+    width: 48px;
+    height: 48px;
+    color: $color-purple;
+    margin: 0 auto;
+    font-size: 48px;
+  }
+  
+  .icon-failed {
+    color: $color-red-fail;
+  }
+
+  .result_des {
+    text-align: center;
+    margin: 20px 0;
+    font-size: $font-size-sm;
+
+    .title {
+      font-size: $font-size-lm;
+      font-weight: 500;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    
+  }
+
+  ul {
+    margin-bottom: 23px;
+  }
+
+  li {
+    font-size: $font-size-sm;
+    color: $color-text-primary;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.07);
+    height: 48px;
+    line-height: 48px;
+
+    span {
+      min-width: 124px;
+      display: inline-block;
+      margin-right: 8px;
+      color: $color-text-regular;
+    }
+
+    a {
+        float: right;
+        padding-right: 15px;
+        color: $color-purple-second;
+    }
+  }
+  button {
+    min-width: 170px;
+    font-weight: 500;
+    height: 40px;
+  }
+}
+
+.leave_note {
+  .v_info {
+    height: 72px;
+  }
+
+  &.dl_style_1 {
+    border: none;
+  }
+}
+
+.pay_tips span {
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  
+  a {
+    color: $color-purple-second !important;
+
+    &:hover {
+      color: $color-theme-highlight !important;
+    }
+  }
+}
+
+.order_submitted {
+  .col_left {
+    dt {
+      padding: 0px 0 0px 19px !important;
+      line-height: 48px;
+      font-size: 16px;
+      color: #333;
+      font-weight: 700;
+    }
+
+    .dl_style_1 {
+      &:first-child {
+        min-height: 348px;
+      }
+    }
+  }
+
+  .col_right {
+    @extend .col_left;
+    dt {
+      padding-left: 32px !important;
+    }
+  }
+}
+
+
+

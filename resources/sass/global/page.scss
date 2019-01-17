@@ -1,0 +1,74 @@
+// 分页 
+.paging { 
+  text-align: center; 
+  margin-bottom: 3em; 
+  font-size: 14px; 
+  padding-top:16px;
+
+  .c-page {
+    margin:0;
+    font-size:14px;
+
+    a {
+      height: 36px;
+      line-height: 34px;
+      width: 44px;
+      text-align: center;
+      display: inline-block;
+      margin: 0 2px;
+      vertical-align: middle;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background-color: #fff;
+      color: #333;  
+      
+      &:hover {
+        color: $color-purple-second;
+      }
+    }
+
+    p {
+      vertical-align:middle;
+      display:inline-block;
+    }
+
+    .c-ellipsis { 
+      border: none; 
+      background-color: transparent; 
+      width: 20px;
+    }
+
+    .c-ellipsis:before { 
+      content: "..."; 
+      font-size: 20px; 
+      // color: #999;
+    }
+  }
+}
+
+.c-page-pre:before,
+.c-page-next:before,
+.c-page-pre-gray:before,
+.c-page-next-gray:before { 
+  font-family: 'icomoon' !important; 
+  content: "\e900";
+}
+
+.c-page-next:before,
+.c-page-next-gray:before {
+  content: "\e901";
+}
+
+.c-page-pre-gray, 
+.c-page-next-gray {
+  cursor:default!important; 
+  color:#ccc!important; 
+  background-color:rgba(0, 0, 0, 0.04)!important;
+  border: 1px solid #e8e8e8!important;
+}
+
+.c-page-focus { 
+  font-weight:600;
+  background-color: $color-purple !important;
+  color: $color-white !important;
+}

@@ -1,0 +1,293 @@
+.verify_box {
+  background: $color-white;
+
+  .title {
+      color: $color-theme;
+      font-size: $font-size-l;
+      font-weight: 700;
+  }
+
+  li {
+      position: relative;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+      
+      .icon-warning {
+        display: none;
+        font-size: 18px;
+        right: 11px;
+      }
+
+      .pass_state ~ .icon-warning,
+      .code_img ~ .icon-warning{
+        display: none;
+        right: 56px;
+      }
+
+      .code_img ~ .icon-warning {
+        right: 79px;
+      }
+
+      .error_tips {
+        position: absolute;
+        bottom: calc(100% - 2px);
+        z-index: 3;
+        width: 100%;
+        padding: 0 15px;
+        font-size: 13px;
+        color: $color-white;
+        background: $color-red;
+        z-index: 10;
+        max-height: 0;
+        transition: all 0.2s ease;
+        overflow: hidden;
+        box-shadow: 0 -3px 6px 0 rgba(0,0,0,0.16);
+      }
+
+      .el-input__inner {
+        border: none !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        line-height: 1;
+
+      }
+
+      .el-date-editor.el-input, .el-date-editor.el-input__inner {
+        width: 100% !important;
+      }
+
+      .c-btn {
+        font-size: $font-size-ms;
+        font-weight: bold;
+      }
+  }
+
+  li .icon-warning,
+  .pass_state,
+  .icon-angle-down,
+  .code_img {
+    font-size: 12px;
+    color: $color-purple;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 16px;
+    cursor: pointer;
+    height: 16px;
+    pointer-events: none;
+  }
+
+  .v_error {
+    .v_info {
+      border: 1px solid $color-red;
+
+      &:focus {
+        border: 1px solid $color-red;
+      }
+    }
+
+    .icon-angle-down {
+      display: none;
+    }
+
+    .icon-warning {
+      color: $color-danger;
+      display: inline-block !important;
+      font-size: $font-size-m;
+      height: 18px;
+      top: 15px;
+      bottom: unset;
+    }
+
+    .placetips {
+      color: $color-red;
+    }
+  }
+
+
+  .code_img {
+    right: 1px;
+  }
+
+  .pass_state,
+  .code_img {
+    pointer-events: unset;
+  }
+
+  .code_img {
+    height: auto;
+    width: 77px;
+    cursor: pointer;
+  }
+
+  .icon-angle-down{
+    font-size: 15px;
+    color: $color-text-regular;
+  }
+
+  .v_error input:focus {
+    & ~ .error_tips {
+      max-height: 99px;
+      padding: 9px 15px 11px;
+      transition: all 0.2s ease;
+    }
+  }
+  
+}
+
+.help_block {
+  font-size: $font-size-sm;
+  color: $color-text-regular;
+  margin-bottom: 8px;
+}
+
+.v_info {
+  width: 100%;
+  font-size: 14px;
+  height: 48px;
+  border-radius: 2px;
+  border: 1px solid  $color-text-secondary;
+  padding: 0 16px 0;
+  transition: all 0.2s ease;
+  background: $color-white;
+
+  &:focus {
+    border: 1px solid rgba(128, 0, 255, 0.6);
+  }
+}
+
+.v_contact {
+  width: 32%;
+  float: left;
+  margin-right: 2%;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .v_info {
+    padding-right: 40px;
+  }
+}
+
+.placetips {
+  font-size: 13px;
+  color: #aaa;
+  pointer-events: none;
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  transition: all 0.2s ease;
+  line-height: 18px;
+}
+
+
+.v_active {
+    padding: 22px 41px 8px 16px;
+    transition: all 0.2s ease;
+  }
+
+.v_active ~ .placetips {
+  position: absolute;
+  left: 16px;
+  top: 4px;
+  transition: all 0.2s ease;
+  // line-height: initial;
+  font-size: $font-size-xs-s;
+}
+
+
+.btn_ok {
+  width: 100%;
+  height: 48px;
+}
+
+.help_des {
+  font-size: $font-size-sm;
+  color: $color-text-regular;
+  margin-bottom: 0;
+
+  p:first-child {
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: $color-purple;
+  }
+}
+
+.select_box {
+  position: relative;
+  border: 1px solid $color-text-secondary;
+  
+  select {
+    padding: 0 34px 0 12px;
+    width: 100%;
+    height: 38px;
+    font-size: $font-size-s;
+  }
+
+  [class^=icon-]{
+    width: 8px;
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    top: 15px;
+    height: 8px;
+    color: $color-text-regular;
+  }
+}
+
+.v_company_info {
+  position: relative;
+  
+  .v_info {
+    padding: 20px 16px 10px;
+    height: 96px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    font-size: $font-size-s;
+  }
+}
+
+
+.v_disabled {
+  background: $color-disabled;
+  pointer-events: none;
+
+  .v_info {
+    border: 1px solid $color-border-base;
+    background: transparent;
+  }
+}
+
+.v_tips {
+  line-height: 18px;
+  font-size: 13px;
+  color: $color-danger;
+  margin-bottom: 14px;
+  // position: absolute;
+  // top: -32px;
+  // left: 0;
+
+  i {
+    margin: -3px 9px 0 0;
+    font-size: $font-size-ms;
+  }
+}
+
+input[type=password] {
+  letter-spacing: 2px;
+}

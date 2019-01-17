@@ -1,0 +1,184 @@
+// #header {
+//   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+// }
+.nav_container {
+  .nav_box {
+    position: relative;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    // overflow: hidden;
+
+    & + .nav_menu.pc {
+      display: none;
+      line-height: 40px;
+    }
+  }
+  .nav_cons {
+    height: 72px;
+    line-height: 72px;
+    margin: 0 20px;
+    position: relative;
+  }
+
+  .fs_logo {
+    width: 17.5em;
+    height: 3.375em;
+    margin-top: 9px;
+    font-size: 0.95em;
+    position: absolute;
+  }
+
+  .nav_tools {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 14px;
+
+    span {
+      max-width: 100px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+    }
+  }
+
+  .nav_menu {
+    width: 100%;
+    // height: inherit;
+    display: block;
+    text-align: center;
+    padding: 0 18.25em 0 17.75em;
+
+    ul {
+      overflow: hidden;
+    }
+
+    li {
+      height: inherit;
+      line-height: inherit;
+      display: inline-block;
+      text-align: center;
+      padding: 0 10px;
+
+      &:last-child{
+        padding-right: 0;
+      }
+
+      &:first-child{
+        padding-left: 0;
+      }
+    }
+
+    a {
+      color: #4b0088;
+      font-size: 14px;
+
+      &:hover {
+        color: #8000ff;
+      }
+    }
+  }
+
+  .nav_tools_cart {
+    position: relative;
+    margin-right: 40px;
+  }
+
+  .nav_account i,
+  .nav_tools_cart i {
+    font-size: 29px;
+    color: #360066;
+  }
+
+  .cart_count {
+    position: absolute;
+    left: 16px;
+    top: -10px;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 4px;
+    background: #ff5445;
+    color: rgba(255, 255, 255, 100);
+    text-align: center;
+    line-height: 20px;
+    padding: 0 4px;
+  }
+
+  .nav_pop {
+    display: none;
+  }
+
+  .nav_account {
+    display: inline-block;
+
+    &:hover {
+      .nav_pop_content {
+        
+        display: block;
+      }
+    }
+
+    span {
+      color: #360066;
+      display: inline-block;
+    }
+
+    i.icon-user {
+      font-size: 28px;
+    }
+
+    .icon-angle-down {
+      font-size: 14px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .nav_join_free {
+    margin-left: 20px;
+
+    button {
+      min-height: 36px;
+      min-width: 98px;
+    }
+  }
+}
+
+@media (max-width:1439px) {
+  .nav_container.nav_head {
+    .nav_cons {
+      height: 114px;
+
+      .nav_menu {
+        padding: 0;
+        height: 40px;
+        line-height: 40px;
+        padding-top: 72px;
+
+        ul {
+          margin: 0 -20px;
+          border-top: 1px solid rgba(0, 0, 0, 0.06);
+          background: rgba(128,0,255,0.90);
+
+          li a {
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    .nav_box {
+      & + .nav_menu.pc {
+        padding: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        li {
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+}

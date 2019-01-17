@@ -1,0 +1,166 @@
+.artical_box {
+  .account_aside {
+    padding: 0 0 16px;
+    border: 1px solid $color-border-base;
+
+    a {
+      display: block;
+      width: 100%;
+
+      &.active {
+        background: $color-gray;
+      }
+    }
+
+    h2 {
+        line-height: 40px;
+        margin-bottom: 0;
+        font-weight: 700;
+        position: relative;
+        font-size: $font-size-s;
+        padding-left: 42px;
+
+         & > i {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 16px;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+          }
+    }
+
+    ul {
+        margin-bottom: 0;
+        
+        li {
+            line-height: 32px;
+            color: $color-text-primary;
+            font-size: $font-size-sm;
+
+            a {
+                padding-left: 42px;
+                color: $color-text-primary;
+
+                &.active {
+                  background: $color-gray;
+                }
+            }
+        }
+    }
+  }
+
+    p {
+        font-size: $font-size-s;
+        color: $color-text-regular;
+        padding: 0;
+        margin-bottom: 16px;
+        line-height: 24px;
+    }
+
+    h1 {
+        margin-bottom: 16px;
+    }
+
+    img {
+        margin: 32px auto;
+    }
+
+    .article-time {
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: #eee;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            z-index: -1;
+        }
+
+        &:after {
+            content: '';
+            background: $color-white;
+            width: 30%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top:0;
+            z-index: -1;
+        }
+    }
+    .account_content {
+        margin-left: 60px;
+        width: calc(100% - 280px);
+
+        h1 {
+          font-size: $font-size-l;
+          color: $color-theme;
+        }
+
+        a {
+          color: $color-purple-second;
+
+          &:hover {
+              color: $color-theme-highlight;
+              text-decoration: underline;
+          }
+        }
+
+        .article-time,
+        h1 {
+          text-align: center;
+        }
+
+        .account-info-header {
+          font-size: $font-size-ls;
+          color: $color-theme;
+          margin-bottom: 16px;
+          font-weight: 700;
+        }
+    }
+
+    .article-body {
+        margin-top: 32px;
+    }
+
+    article {
+      position: relative;
+      padding: 16px 0 16px 20px;
+      border-bottom: 1px dashed $color-border-base;
+
+      p {
+        margin-bottom: 0;
+      }
+
+      .article-list-title {
+        &:before {
+          content: "\E901";
+          font-family: 'icomoon';
+          position: absolute;
+          left: 0;
+          top: 19px;
+          color: $color-text-regular;
+          font-size: 8px;
+        }
+
+        span {
+          color: #999;
+          font-size: 13px;
+        }
+
+        a {
+          color: $color-theme;
+          font-size: $font-size-ms-s;
+        }
+      }
+    }
+}

@@ -1,0 +1,76 @@
+.grid_wrap li {
+  float: left;
+  width: 20%;
+}
+
+.product_card {
+  // border-radius: 2px;
+  position: relative;
+  text-align: left;
+  padding: 16px 0;
+  height: 290px;
+  background: #fff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.26);
+    position:relative;
+    z-index: 9;
+    border:none !important;
+    transition: all 0.3s ease;
+  }
+
+  a {
+    position: relative;
+
+    [class$="_label"] {
+      position: absolute;
+      bottom: -7px;
+      left: 16px;
+    }
+  }
+
+  img {
+    display: block;
+    height: 180px;
+    margin: 0 auto 16px;
+    transition: all 0.2s ease;
+    // padding: 0 20px;
+  }
+
+  .title {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    font-size: 13px;
+    height: 36px;
+    -webkit-line-clamp: 2;
+    line-height: 18px;
+    margin-bottom: 8px;
+    max-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 16px;
+
+    a {
+      color: #333;
+    }
+  }
+
+  .price_box {
+    padding: 0 16px;
+    span {
+      color: #ff5445;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 22px;
+    }
+  }
+
+  .coming_soon {
+    color: $color-green;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 16px; 
+  }
+}
+

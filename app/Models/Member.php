@@ -32,4 +32,14 @@ class Member extends ModelBase implements AuthenticatableContract, AuthorizableC
     {
         return $this->password_shadow;
     }
+
+    /**
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function countryModel()
+    {
+        // TODO
+        return $this->hasOne(Country::class, 'id', 'country');
+    }
 }

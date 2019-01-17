@@ -1,0 +1,43 @@
+.c-message {
+  margin-top: 20%;
+  padding: 16px!important;
+  min-width: unset!important;
+
+  .el-message__icon {
+    font-size: 24px;
+  }
+
+  .el-message__icon,
+  .el-message__content {
+    color: $color-white !important;
+  }
+}
+
+.el-message--success {
+  background: rgba(40,170,68,0.90)!important;
+  border-radius: 2px!important;
+  border-color:rgba(40,170,68,0.90)!important; 
+}
+
+.el-message--warning,
+.el-message--error
+ {
+  @extend .el-message--success;
+  background: rgba(51,51,51,0.90)!important;
+  border-color: rgba(51,51,51,0.90) !important;
+}
+
+.el-icon-success:before {
+  font-family: 'icomoon';
+  content: "\e908"!important;
+}
+
+.el-icon-warning:before {
+  font-family: 'icomoon';
+  content: "\e920"!important;
+}
+
+.el-icon-error:before {
+  font-family: 'icomoon';
+  content: "\e920"!important;
+}

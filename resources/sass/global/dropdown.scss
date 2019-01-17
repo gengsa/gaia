@@ -1,0 +1,24 @@
+.nav_pop_content {
+  display: none;
+  position: absolute;
+  top: 72px;
+  right: -30px;
+  background: $color-white;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.26);
+  letter-spacing: 0;
+  line-height: 44px;
+  font-size: 14px;
+  min-width: 160px;
+  z-index: 9;
+  padding: 8px 20px 16px;
+
+  li {
+    a:hover {
+      color: $color-theme-highlight;
+    }
+  }
+}
+
+  .invoice_pop_content {
+    @extend .nav_pop_content;
+  }

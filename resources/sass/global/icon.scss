@@ -1,0 +1,197 @@
+@font-face {
+  font-family: 'icomoon';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../static/fonts/icomoon.eot');
+  src: url('../static/fonts/icomoon.eot') format('embedded-opentype'), url('../static/fonts/icomoon.ttf') format('truetype'), url('../static/fonts/icomoon.woff') format('woff'), url('../static/fonts/icomoon.svg') format('svg');
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  display: inline-block;
+
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: auto;
+  line-height: 1;
+  margin-top: 0;
+  speak: none;
+  text-transform: none;
+  vertical-align: middle;
+  width: auto;
+
+  &::before {
+    display: inline-block;
+    speak: none;
+    text-decoration: inherit;
+  }
+}
+
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline;
+}
+
+.icon-alert:before {
+  content: "\e920";
+}
+
+.icon-share:before {
+  content: "\e91f";
+}
+
+.icon-like:before {
+  content: "\e91e";
+}
+
+.icon-article:before {
+  content: "\e91d";
+}
+
+.icon-trash:before {
+  content: "\e91a";
+}
+
+.icon-address:before {
+  content: "\e918";
+}
+
+.icon-attention:before {
+  content: "\e919";
+}
+
+.icon-24hours:before {
+  content: "\e90e";
+}
+
+.icon-exclusive-price:before {
+  content: "\e90f";
+}
+
+.icon-original:before {
+  content: "\e910";
+}
+
+.icon-warranty:before {
+  content: "\e911";
+}
+
+.icon-delivery:before {
+  content: "\e912";
+}
+
+.icon-ordered:before {
+  content: "\e913";
+}
+
+.icon-packed:before {
+  content: "\e914";
+}
+
+.icon-paid:before {
+  content: "\e915";
+}
+
+.icon-p-payment:before {
+  content: "\e916";
+}
+
+.icon-p-shipment:before {
+  content: "\e917";
+}
+
+.icon-warning:before {
+  content: "\e90b";
+}
+
+.icon-angle-left:before {
+  content: "\e900";
+}
+
+.icon-angle-right:before {
+  content: "\e901";
+}
+
+.icon-angle-down:before {
+  content: "\e902";
+}
+
+.icon-cart:before {
+  content: "\e903";
+}
+
+.icon-chat:before {
+  content: "\e904";
+}
+
+.icon-customer-service:before {
+  content: "\e905";
+}
+
+.icon-email:before {
+  content: "\e906";
+}
+
+.icon-failed:before {
+  content: "\e907";
+}
+
+.icon-ok:before {
+  content: "\e908";
+}
+
+.icon-phone:before {
+  content: "\e909";
+}
+
+.icon-user:before {
+  content: "\e90a";
+}
+
+.icon-search:before {
+  content: "\e90c";
+}
+
+.icon-shipped:before {
+  content: "\e90d";
+}
+
+.icon-zoom-in:before {
+  content: "\e91b";
+}
+
+// mine add
+.icon-angle-up:before {
+  content: "\e902";
+  transform: rotate(-180deg);
+}
+
+.icon-close:before,
+.el-icon-close:before {
+  font-family: 'icomoon';
+  content: "\e91c"!important;
+}
+
+.icon-loading {
+  background: url(../static/images/Spin-loading.svg) 0 -1px no-repeat;
+  width: 32px;
+  height: 32px;
+}
+
+.carousel-nav .carousel-nav-prev:before {
+  content: "\e900";
+  font-family: 'icomoon';
+}
+
+.carousel-nav .carousel-nav-next:before {
+  content: "\e901";
+  font-family: 'icomoon';
+}

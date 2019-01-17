@@ -1,0 +1,278 @@
+html,
+body,
+div,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+input,
+button,
+select,
+textarea,
+img,
+table,
+th,
+td,
+article,
+aside,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+p {
+  border: none;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+::-ms-clear { display: none; }
+
+::-ms-reveal { display: none; }
+
+article,
+aside,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-size: 1em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  line-height: 1.5;
+  min-height: 100%;
+  min-width: 1200px;
+  position: relative;
+  width: 100%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: $color-text-primary;
+  cursor: pointer;
+  outline: 0;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-theme-highlight;
+  }
+}
+
+.color-purple {
+  color: $color-purple;
+
+  &:hover {
+    color: $color-theme-highlight;
+  }
+}
+
+
+.clear::after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+}
+
+button{outline:none;}
+
+input[type=text],
+input[type=password],
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance:none; 
+  -moz-appearance:none;
+  outline: none;
+  background: transparent;
+  box-sizing: border-box;
+  resize: none;
+  font-weight: 500;
+  color: #444;
+}
+
+.el-dialog__body,
+.el-dialog__header {
+  padding: 0!important;
+}
+
+.el-dialog__headerbtn {
+  right: 10px !important;
+  top: 10px !important;
+  font-size: 20px !important;
+  width: 30px;
+  height: 30px;
+
+  .el-dialog__close {
+    color: #999!important;
+
+    &:hover {
+      color: #666!important;
+    }
+  }
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner, 
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    border-color: $color-theme!important;
+    background: $color-theme !important;
+}
+
+
+
+.el-checkbox__inner {
+  width: 16px !important;
+  height: 16px !important;
+
+  &::after {
+    left: 5px!important;
+    border-width: 1.5px !important;
+  }
+
+  &:hover {
+    border-color: $color-purple !important;
+  }
+}
+
+.address_icon .el-radio {
+  position: absolute;
+  text-align: center;
+  top: 3px!important;
+  left: 2px !important;
+}
+
+.el-radio__inner {
+  width: 20px !important;
+  height: 20px !important;
+  border: 1.5px solid #ccc !important;
+  border-radius: 50%;
+
+  &::after {
+    width: 10px !important;
+    height: 10px !important;
+    background: $color-theme-highlight !important;
+  }
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+  border-color: $color-theme-highlight!important;
+  background: $color-white !important;
+}
+
+.el-radio__label {
+    font-size: 14px;
+    padding-left: 15px!important;
+    color: #333!important;
+}
+
+.el-radio__inner {
+  border-radius: 50%!important;
+  
+  &:after {
+    border-radius: 50%!important;
+  }
+}
+
+.el-switch {
+  float: right;
+  margin-top: 14px;
+}
+
+.el-message-box {
+  width: auto!important;
+  min-width: 360px;
+  max-width: 400px;
+  padding-bottom: 32px;
+  
+  .el-message-box__content {
+    color: $color-text-primary;
+    padding: 0 32px 32px!important;
+
+    p {
+      padding: 16px 0;
+    }
+  }
+
+  .el-message-box__btns {
+    padding: 0 32px !important;
+  }
+  .el-button--default {
+    min-width: 140px;
+    height: 36px;
+    font-size: 15px;
+    color: $color-theme-highlight;
+    border-color: rgba(128, 0, 255, 0.8);
+    border-radius: 2px;
+
+    &:hover {
+      background: none;
+      border-color: none;
+      color: $color-theme-highlight;
+      border-color: rgba(128, 0, 255, 0.8);
+    }
+  }
+
+  .el-button--primary {
+    background-color: none!important;
+    background-image: linear-gradient(142deg, #9b00ff 0%, #8000ff 80%)!important;
+    border: 1px solid #8000ff!important;
+    color: #fff;
+
+    &:hover {
+      background-color: none!important;
+      background-image: linear-gradient(142deg, #9b00ff 0%, #8000ff 80%)!important;
+      border: 1px solid #8000ff!important;
+      color: #fff;
+    }
+  }
+
+
+}
+

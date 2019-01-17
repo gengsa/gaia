@@ -1,0 +1,42 @@
+// import global in there
+@import 'global/variables';      // color and fontSize definition
+@import 'global/reset';
+@import 'global/btn';
+@import 'global/icon';
+@import 'global/label';          // common _label
+@import 'global/form_modules';   // form表单
+@import 'global/dropdown';       // dropdown scss
+@import 'global/alert_dialog';   // common_dialog
+@import 'global/badge';          // badge标记
+@import 'global/crumbs';
+@import 'global/steps';
+@import 'global/process';
+@import 'global/page';
+@import 'global/message_tips';
+@import 'global/global';
+@import 'global/header';
+@import 'global/footer';
+@import 'global/goods_card';
+
+//login
+@import 'account/login';
+
+// index
+@import 'index/index';
+
+
+// product
+@import 'product/index';
+
+//cart 
+@import 'cart/index';
+
+//member 
+@import 'member/index';
+
+//error
+@import 'error/error_404';
+
+//article  
+@import 'article/index';
+// and some other page
